@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://getbootstrap.com/docs/5.1/examples/dashboard/ -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Dashboard Template · Bootstrap v5.1</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/apple-touch-icon.png"
+        sizes="180x180">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32"
+        type="image/png">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16"
+        type="image/png">
+    <link rel="manifest" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/safari-pinned-tab.svg"
+        color="#7952b3">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/favicon.ico">
+    <link href="./Dashboard Template · Bootstrap v5.1_files/dashboard.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="theme-color" content="#7952b3">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+
+            #logout {
+                display: none;
+            }
+
+            .footer {
+                margin-left: 15%;
+            }
+
+            /* #side {
+        display: none;
+      } */
+        }
+
+        @media (max-width: 768px) {
+            .marketing {
+                display: none;
+            }
+
+            .text-nowrap a {
+                display: none;
+            }
+
+            /* .sidebar {
+        padding: 0;
+        margin-top: -5%;
+      } */
+
+            /* #large {
+        display: none;
+      } */
+
+            /* #side {
+        display: block;
+      }*/
+        }
+
+        .marketing .col-md-3 {
+            margin-bottom: 1.5rem;
+            text-align: center;
+
+        }
+
+        .marketing h2 {
+            font-weight: 400;
+        }
+
+        /* rtl:begin:ignore */
+        .marketing .col-md-3 p {
+            margin-right: .75rem;
+            margin-left: .75rem;
+        }
+
+        .marketing {
+            margin-top: auto;
+        }
+
+        .col-md-3 h4 {
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+
+        .col-md-3 .btn {
+            padding: 0.375rem 0.3rem;
+        }
+
+        .footer {
+            background-color: #000000;
+            color: #ffffff;
+            color: rgba(255, 255, 255, 1);
+            font-size: 10px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+                "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        #body-wrapper {
+            min-height: 100%;
+            position: relative;
+            padding-bottom: 1.6%;
+        }
+
+        .profile_image {
+            text-align: center;
+        }
+
+        .profile_image img {
+            width: 50%;
+        }
+
+        #License td {
+            text-align: center;
+            align-items: center;
+            vertical-align: middle;
+        }
+
+        table {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3"
+            href="https://getbootstrap.com/docs/5.1/examples/dashboard/#" style="font-size: 1.5rem;">PRIFIT</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-nav">
+            <div class="nav-item text-nowrap">
+                <a class="nav-link px-3" href="https://getbootstrap.com/docs/5.1/examples/dashboard/#">로그아웃</a>
+            </div>
+        </div>
+    </header>
+    <div id="body-wrapper">
+        <div class="container-fluid" id="large">
+            <div class="row">
+                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                    <div class="position-sticky pt-3">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="Main.html">
+                                    <span data-feather="home"></span>
+                                    메인화면
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="notice_event.html">
+                                    <span data-feather="book"></span>
+                                    공지사항 / 이벤트
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="user_management.html">
+                                    <span data-feather="user"></span>
+                                    회원관리
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="coach_management.html">
+                                    <span data-feather="users"></span>
+                                    강사관리
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="center_management.html">
+                                    <span data-feather="bar-chart"></span>
+                                    시설관리
+                                </a>
+                            </li>
+                            <li class="nav-item" id="logout">
+                                <a class="nav-link" href="#">
+                                    <span data-feather="log-out"></span>
+                                    로그아웃
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                    <div
+                        class="d-flex justify-content-between flex-wrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1 class="h2">강사 관리</h1>
+                    </div>
+                    <div class="contatiner-lg"
+                        style="display: flex; padding-top: 10px; margin: auto; align-items: center;">
+                        <div class="container marketing">
+                            <div class="row">
+                                <div class="card-fix-2 col">
+                                    <div class="card">
+                                        <i class="bi-star-fill iconsize-center"></i>
+                                        <div class="card-body" style="text-align: center;">
+                                            <img src="images/user.png" style="width:30%; height:30%;">
+                                            <br><br>
+                                            <h3 class="card-title">총 강사 수 : 000 명 </h3>
+                                            <h3 class="card-title">프리랜서 강사 수 : 000 명 </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-fix-2 col">
+                                    <div class="card" style="width: 100%; height:100%;">
+                                        <i class="bi-info-square-fill iconsize-center"></i>
+                                        <div class="card-body">
+                                            <canvas id="myChart" style="width: 100%; height:100%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1 class="h2"><i class="bi-chat"></i>강사목록</h1>
+                        <div class="btn-toolbar mb-2 mb-md-0">
+                            <div class="btn-group me-2">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">전체</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">프리랜서 강사</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">소속 강사</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">순번</th>
+                                    <th scope="col">직급</th>
+                                    <th scope="col">이름</th>
+                                    <th scopt="col">성별</th>
+                                    <th scopt="col">연락처</th>
+                                    <th scope="col">소속</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-bs-toggle="modal" data-bs-target="#coach_detail">
+                                    <td>1</td>
+                                    <td>임원</td>
+                                    <td>sombody</td>
+                                    <td>남</td>
+                                    <td>010-1234-5678</td>
+                                    <td>프리랜서</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>과장</td>
+                                    <td>else</td>
+                                    <td>남</td>
+                                    <td>010-1234-5678</td>
+                                    <td>바디포헬스</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>대리</td>
+                                    <td>help</td>
+                                    <td>남</td>
+                                    <td>010-1234-5678</td>
+                                    <td>빛가람헬스</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>부장</td>
+                                    <td>me</td>
+                                    <td>남</td>
+                                    <td>010-1234-5678</td>
+                                    <td>프리랜서</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>사원</td>
+                                    <td>please</td>
+                                    <td>남</td>
+                                    <td>010-1234-5678</td>
+                                    <td>빛고을 헬스</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>임원</td>
+                                    <td>!!!!</td>
+                                    <td>남</td>
+                                    <td>010-1234-5678</td>
+                                    <td>캘리포니아 헬스</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>주임</td>
+                                    <td>sombody</td>
+                                    <td>남</td>
+                                    <td>010-1234-5678</td>
+                                    <td>피트니스스타</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>차장</td>
+                                    <td>else</td>
+                                    <td>남</td>
+                                    <td>010-1234-5678</td>
+                                    <td>머슬핏 헬스</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>대리</td>
+                                    <td>help</td>
+                                    <td>남</td>
+                                    <td>010-1234-5678</td>
+                                    <td>머슬헬프</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>과장</td>
+                                    <td>me</td>
+                                    <td>남</td>
+                                    <td>010-1234-5678</td>
+                                    <td>퍼스트짐PT센터</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>사원</td>
+                                    <td>please</td>
+                                    <td>남</td>
+
+                                    <td>010-1234-5678</td>
+                                    <td>에소르휘트니스 나주점</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>사원</td>
+                                    <td>!!!!</td>
+                                    <td>남</td>
+                                    <td>010-1234-5678</td>
+                                    <td>짐나인</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </main>
+            </div>
+            <div style="float:right; display:block;">
+                <button class="btn btn-outline-secondary" type="button" data-bs-toggle="modal"
+                    data-bs-target="#Add_coach">추가</button>
+            </div>
+        </div>
+        <div class="container" style="margin: atuo; padding-left: 15%">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="javascript:void(0);">Previous</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="javascript:void(0);">1</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="javascript:void(0);">2</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="javascript:void(0);">3</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="javascript:void(0);">4</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="javascript:void(0);">5</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="javascript:void(0);">6</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="javascript:void(0);">Next</a>
+                </li>
+            </ul>
+            <hr>
+            <div class="input-group mb-3">
+                <select class="form-select">
+                    <option value="">검색 항목</option>
+                    <option>이름</option>
+                    <option>연락처</option>
+                    <option>주소</option>
+                </select>
+                <input type="text" class="form-control" placeholder="Search">
+                <button class="btn btn-success" type="submit">Go</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="coach_detail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">강사 정보</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="profile_image">
+                            <img src="images/user.png">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="inputState" class="form-label">직급</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="viewEmail4" class="form-label">이름</label>
+                            <input type="email" class="form-control" id="viewEmail4">
+                        </div>
+                        <div class="col-md-6" style="width:10%;">
+                            <label for="viewGender" class="form-label">성별</label>
+                            <input type="text" class="form-control" id="viewGender">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="viewBelongs" class="form-label">소속</label>
+                            <input type="text" class="form-control" id="viewBelongs">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="viewBirth" class="form-label">생년월일</label>
+                            <input type="text" class="form-control" id="viewBirth">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="viewReg" class="form-label">생년월일</label>
+                            <input type="text" class="form-control" id="viewReg">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="viewAcc" class="form-label">등록일자</label>
+                            <input type="text" class="form-control" id="viewAcc">
+                        </div>
+                        <div class="col-12">
+                            <label for="viewnumber" class="form-label">연락처</label>
+                            <input type="text" class="form-control" id="viewnumber" placeholder="1234 Main St">
+                        </div>
+
+                        <div class="col-12">
+                            <label for="viewAddress" class="form-label">주소</label>
+                            <input type="text" class="form-control" id="viewAddress"
+                                placeholder="Apartment, studio, or floor">
+                        </div>
+                        <div class="col-12">
+                            <label for="viewBelongsAddr" class="form-label">소속 시설 주소</label>
+                            <input type="text" class="form-control" id="viewBelongsAddr"
+                                placeholder="Apartment, studio, or floor">
+                        </div>
+                        <div class="col-12">
+                            <label for="viewLicense" class="form-label">자격증</label>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>자격증 명</th>
+                                        <th>인증기관</th>
+                                        <th>취득일자</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>john@example.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mary</td>
+                                        <td>Moe</td>
+                                        <td>mary@example.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>July</td>
+                                        <td>Dooley</td>
+                                        <td>july@example.com</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-12">
+                            <label for="viewAwards" class="form-label">수상내역</label>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>일자</th>
+                                        <th>대회</th>
+                                        <th>구분</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>john@example.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mary</td>
+                                        <td>Moe</td>
+                                        <td>mary@example.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>July</td>
+                                        <td>Dooley</td>
+                                        <td>july@example.com</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-12">
+                            <label for="viewPrice" class="form-label">PT 가격</label>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>횟수</th>
+                                        <th>가격</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mary</td>
+                                        <td>Moe</td>
+                                    </tr>
+                                    <tr>
+                                        <td>July</td>
+                                        <td>Dooley</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">수정</button>
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal" data-bs-target="#Edit_Notice"
+                        data-bs-toggle="modal">삭제</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Add_coach" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">강사정보</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-md-2">
+                            <label for="inputState" class="form-label">직급</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail" class="form-label">이름</label>
+                            <input type="email" class="form-control" id="inputEmail">
+                        </div>
+                        <div class="col-md-6" style="width:10%;">
+                            <label for="inputGender" class="form-label">성별</label>
+                            <input type="text" class="form-control" id="inputgender">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputBelongs" class="form-label">소속</label>
+                            <input type="text" class="form-control" id="inputBelongs">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputBirth" class="form-label">생년월일</label>
+                            <input type="text" class="form-control" id="inputBirth">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputReg" class="form-label">가입일자</label>
+                            <input type="text" class="form-control" id="inputReg">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAccess" class="form-label">등록일자</label>
+                            <input type="text" class="form-control" id="inputAccess">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputNumber" class="form-label">연락처</label>
+                            <input type="text" class="form-control" id="inputNumber" placeholder="1234 Main St">
+                        </div>
+
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">주소</label>
+                            <input type="text" class="form-control" id="inputAddress"
+                                placeholder="Apartment, studio, or floor">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputBelongsAddr" class="form-label">소속 시설 주소</label>
+                            <input type="text" class="form-control" id="inputBelongsAddr"
+                                placeholder="Apartment, studio, or floor">
+                        </div>
+                        <div class="col-12" id="License">
+                            <label for="inputLicense" class="form-label">자격증</label>
+                            <button type="button" class="btn btn-outline-secondary add_list"
+                                style="float:right;">+</button>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>자격증 명</th>
+                                        <th>인증기관</th>
+                                        <th>취득일자</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="License_table">
+                                    <tr class="License_input">
+                                        <td><input type="text"></td>
+                                        <td><input type="text"></td>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-12" id="Awards">
+                            <label for="inputAwards" class="form-label">수상내역</label>
+                            <button type="button" class="btn btn-outline-secondary add_list"
+                                style="float:right;">+</button>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>일자</th>
+                                        <th>대회</th>
+                                        <th>구분</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="Awards_list">
+                                    <tr class="Awards_input">
+                                        <td><input type="text"></td>
+                                        <td><input type="text"></td>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-12" id="Price">
+                            <label for="inputPrice" class="form-label">PT 가격</label>
+                            <button type="button" class="btn btn-outline-secondary add_list"
+                                style="float:right;">+</button>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>횟수</th>
+                                        <th>가격</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="Price_list">
+                                    <tr class="Price_input">
+                                        <td><input type="text"></td>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-warning">추가</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <br />
+        PRIFIT : (주)테라에너지 l 대표이사 : 이민성 l 개인정보관리 책임자 : l
+        소재지 : 전라남도 나주시 그린로 379, 포레루체 210호 <br />
+        대표메일주소 : l 고객센터 : / Fax : l (AM 09:30 ~ PM 06:00 / 토, 일
+        공휴일휴무) <br />
+        통신판매업신고 : l 사업자등록번호 : <br />
+        <br />
+        COPYRIGHT © TERAENERGY INC. ALL RIGHTS RESERVED.
+    </footer>
+</body>
+<script>
+    feather.replace({ 'aria-hidden': 'true' });
+    const background = ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)'];
+    const bdColor = ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)'];
+    var ctx = document.getElementById('myChart');
+    var charData = {
+        labels: ["2021.11", "2021.12", "2022.01", "2022.02"],
+        datasets: [{
+            label: '사용자 수',
+            data: [100, 150, 160, 200],
+            backgroundColor: background[0],
+            borderColor: bdColor[0],
+            borderWidth: 1
+        },
+        {
+            label: '정기권 사용자 수',
+            data: [50, 70, 90, 150],
+            backgroundColor: background[1],
+            borderColor: bdColor[1],
+            borderWidth: 1
+        },
+        {
+            label: '등록 강사 수',
+            data: [30, 60, 80, 110],
+            backgroundColor: background[2],
+            borderColor: bdColor[2],
+            borderWidth: 1
+        },
+        {
+            label: '등록 시설 수',
+            data: [10, 13, 20, 27],
+            backgroundColor: background[3],
+            borderColor: bdColor[3],
+            borderWidth: 1
+        }
+        ]
+    };
+
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: charData,
+        option: {
+            // responsive: false,
+            scales: {
+                yAxes: [{
+                    tecks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+
+
+    $(document).on("click", "#License > button", function () {
+        var addLicense = '<tr class="License_input">' +
+            '<td><input type="text"></td>' +
+            '<td><input type="text"></td>' +
+            '<td><input type="text"></td>' +
+            '<td><button type="button" class="btn btn-outline-secondary delbutton">-</button>' +
+            '</td></tr>';
+
+        var lic_location = $("#License_table > tr.License_input:last");
+
+        lic_location.after(addLicense);
+    });
+
+    $(document).on("click", "#License_table > tr:nth-child(2) > td:nth-child(4) > button", function () {
+        var lic_location = $(this).parent().parent();
+        lic_location.remove();
+    });
+
+    $(document).on("click", "#Awards > button", function () {
+        var addAwards = '<tr class="Awards_input">' +
+            '<td><input type="text"></td>' +
+            '<td><input type="text"></td>' +
+            '<td><input type="text"></td>' +
+            '<td><button type="button" class="btn btn-outline-secondary delbutton">-</button>' +
+            '</td></tr>';
+
+        var awd_location = $("#Awards_list > tr:last");
+
+        awd_location.after(addAwards);
+    });
+
+    $(document).on("click", "#Awards_list > tr:nth-child(2) > td:nth-child(4) > button", function () {
+        var awd_location = $(this).parent().parent();
+        awd_location.remove();
+    });
+
+    $(document).on("click", "#Price > button", function () {
+        var addPrice = '<tr class="Price_input">' +
+            '<td><input type="text"></td>' +
+            '<td><input type="text"></td>' +
+            '<td><button type="button" class="btn btn-outline-secondary delbutton">-</button>' +
+            '</td></tr>';
+
+        var prc_location = $("#Price_list > tr:last");
+
+        prc_location.after(addPrice);
+    });
+
+    $(document).on("click", "#Price_list > tr:nth-child(2) > td:nth-child(3) > button", function () {
+        var prc_location = $(this).parent().parent();
+        prc_location.remove();
+    });
+</script>
+
+</html>
